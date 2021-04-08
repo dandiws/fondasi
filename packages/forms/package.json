@@ -1,5 +1,5 @@
 {
-  "name": "@fondasi/layouts",
+  "name": "@fondasi/forms",
   "version": "0.0.0",
   "main": "dist/index.js",
   "types": "dist/index",
