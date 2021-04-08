@@ -1,0 +1,4 @@
+node_modules/
+dist/
+public/
+__tests__/

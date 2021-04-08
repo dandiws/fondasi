@@ -1,0 +1,19 @@
+{
+  "include": ["packages/*/src"],
+  "compilerOptions": {
+    "lib": ["dom", "esnext"],
+    "jsx": "react",
+    "declaration": true,
+    "declarationMap": true,
+    "moduleResolution": "node",
+    "target": "ES2015",
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "paths": {
+      "@fondasi/*": ["packages/*/src"]
+    }
+  }
+}

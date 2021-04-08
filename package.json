@@ -1,0 +1,34 @@
+{
+  "scripts": {
+    "web": "yarn workspace @fondasi/website",
+    "lint": "eslint packages --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "yarn lint --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "dev": "lerna run dev --stream --parallel"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@storybook/addon-actions": "^6.2.4",
+    "@storybook/addon-essentials": "^6.2.4",
+    "@storybook/addon-links": "^6.2.4",
+    "@storybook/react": "^6.2.4",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.12.1",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.23.1",
+    "lerna": "^4.0.0",
+    "typescript": "^4.2.3"
+  },
+  "dependencies": {},
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "name": "fondasi"
+}
