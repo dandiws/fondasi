@@ -1,0 +1,16 @@
+{
+  "name": "@fondasi/buttons",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index",
+  "scripts": {
+    "dev":"tsc -w"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@fondasi/core": "^0.0.0"
+  },
+  "devDependencies": {
+    "@fondasi/core": "^0.0.0"
+  }
+}
