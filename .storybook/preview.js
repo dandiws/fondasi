@@ -1,7 +1,3 @@
-import React from "react"
-import { configure, addDecorator } from "@storybook/react"
-import themeDecorator from "./theme-decorator"
-
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -12,6 +8,12 @@ export const parameters = {
   },
 }
 
+import { globalStyles } from '../packages/core/dist/globalStyles'
+
 export const decorators = [
-  themeDecorator
+  (Story) => {
+    globalStyles()
+
+    return <Story />
+  }
 ]
