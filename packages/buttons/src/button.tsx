@@ -1,53 +1,51 @@
+import React from 'react'
 import { styled } from '@fondasi/core'
+import { ButtonBase } from './button-base'
 
-const createButtonVariant = (color:string) => ({
-  background: `$${color}`,
-  color: 'white',
-  '&:hover': {
-    background: `$${color}_600`
-  },
-  '&:focus': {
-    $$boxColor: `$colors$${color}_transparent_500`,
-    borderColor: `$${color}`
-  }
-})
-
-export const Button = styled('button', {
-  px: '$3',
-  py: '$2',
-  borderStyle: 'solid',
-  borderRadius: '$md',
-  borderWidth: 1,
-  borderColor: '$gray_300',
-  background: '$gray_100',
-  outline: 0,
-  cursor: 'pointer',
-  fontSize: 'inherit',
-  '&:hover': {
-    background: '$gray_200'
-  },
-  '&:focus': {
-    $$boxColor: '$colors$primary_transparent_500',
-    borderColor: '$primary',
-    boxShadow: '0 0 0 2px $$boxColor'
-  },
+export const ButtonStyled = styled(ButtonBase, {
   variants: {
-    variant: {
-      success: createButtonVariant('success'),
-      primary: createButtonVariant('primary'),
-      danger: createButtonVariant('danger'),
-      warning: createButtonVariant('warning'),
-      info: createButtonVariant('info')
-    },
     size: {
-      small: {
+      medium: {
+        fontSize: '0.75rem',
+        px: '$3',
+        height: 32,
+      },
+      smaller: {
+        fontSize: '0.66rem',
         px: '$2',
-        py: '$1'
+        height: 20,
+      },
+      small: {
+        fontSize: '0.75rem',
+        px: '$2',
+        height: 24,
       },
       large: {
+        fontSize: '0.9rem',
         px: '$4',
-        py: '$3'
+        height: 42
       }
     }
+  },
+  defaultVariants:{
+    size: 'medium'
   }
 })
+
+export type ButtonProps = React.ComponentProps<typeof ButtonStyled> & {
+  leftIcon?: (props: any) => JSX.Element
+  rightIcon?: (props: any) => JSX.Element
+}
+
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ children, leftIcon: LeftIcon, rightIcon: RightIcon,  ...props} , ref) => {
+  return (
+    <ButtonStyled ref={ref} {...props}>
+      {LeftIcon && <LeftIcon className="btn-icon btn-icon-left" />}
+      {children}
+      {RightIcon && <RightIcon className="btn-icon btn-icon-right" />}
+    </ButtonStyled>
+  )
+})
+
+
+Button.displayName = 'Button'
