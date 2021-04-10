@@ -16,3 +16,12 @@ storiesOf('Input', module).add('Input state', () => (
     <Input placeholder="Read Only" readOnly />
   </Stack>
 ))
+
+
+storiesOf('Input', module).add('Input sizes', () => (
+  <Stack direction="vertical" spacing="$2" css={{ maxWidth: 320 }}>
+    <Input placeholder="Small" size="small"  />
+    <Input placeholder="Medium (default)" size="medium" />
+    <Input placeholder="Large" size="large" />
+  </Stack>
+))
