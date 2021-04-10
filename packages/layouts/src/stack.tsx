@@ -24,10 +24,10 @@ const Hstack = styled(Flex, {
     mx: '$$spacing'
   },
 
-  '& > :last-of-type': {
+  '& > :last-child': {
     marginRight: 0
   },
-  '& > :first-of-type': {
+  '& > :first-child': {
     marginLeft: 0
   }
 })
@@ -38,10 +38,10 @@ const VStack = styled(Flex, {
     $$spacing: 0,
     my: '$$spacing'
   },
-  '& > :last-of-type': {
+  '& > :last-child': {
     marginBottom: 0
   },
-  '& > :first-of-type': {
+  '& > :first-child': {
     marginTop: 0
   }
 })
