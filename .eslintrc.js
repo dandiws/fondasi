@@ -18,5 +18,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error'],
     'jsx-quotes': ['error', 'prefer-double'],
     'react/prop-types': 'off'
+    'no-undef': 'off'
   }
+
 }
